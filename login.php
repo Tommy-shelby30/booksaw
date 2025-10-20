@@ -16,18 +16,32 @@
             <p class="subtitle">Login in to continue</p>
         </div>
         
+<<<<<<< HEAD
         <form method="POST">
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" required>
+=======
+        <form>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+>>>>>>> 4a6b7625e60e1e37152986f9200a47e9425557b8
             </div>
             
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
+<<<<<<< HEAD
                 <input type="password" name="password" class="form-control" id="password" placeholder="Enter your password" required>
             </div>
             
             <button type="submit" name="submit" class="btn btn-login btn-dark">Login</button>
+=======
+                <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+            </div>
+            
+            <button type="submit" class="btn btn-login btn-dark">Login</button>
+>>>>>>> 4a6b7625e60e1e37152986f9200a47e9425557b8
             
 
         </form>
@@ -35,6 +49,7 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 </body>
+<<<<<<< HEAD
 </html>
 <?php
 include("admin/conn.php");
@@ -54,3 +69,6 @@ if(isset($_POST["submit"])){
     }
 }
 ?>
+=======
+</html>
+>>>>>>> 4a6b7625e60e1e37152986f9200a47e9425557b8
