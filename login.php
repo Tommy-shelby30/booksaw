@@ -44,23 +44,38 @@
 
 </html>
 <?php
-include("admin/conn.php");
-if(isset($_POST["submit"])){
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+session_start();
+include('admin/conn.php');
 
-    $query = "select * from signup where email = '$email' and password = '$password'";
+if (isset($_POST['submit'])) {
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
+
+    $query = "SELECT * FROM signup1 WHERE email = '$email' AND password = '$password'";
     $run = mysqli_query($conn, $query);
     $totalrows = mysqli_num_rows($run);
-    if($totalrows > 0) {
-        $_SESSION['email'] = $email;
-        header('location:admin/dashboard.php');
-    }
-    else{
-        echo "user not found";
+
+    if ($totalrows != 0) {
+        $data = mysqli_fetch_assoc($run);
+
+        
+        $_SESSION['user_id'] = $data['id'];       
+        $_SESSION['user_name'] = $data['name'] ?? $data['email']; 
+
+        if ($email == 'admin@gmail.com' && $password == 'admin123') {
+            header('Location: admin/dashboard.php');
+            exit();
+        } else {
+            header('Location: index.php');  
+            exit();
+        }
+    } else {
+        echo "Data not found";
     }
 }
 ?>
+
+
 
 </html>
 

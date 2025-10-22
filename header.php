@@ -100,11 +100,11 @@
 										<a href="#pages" class="nav-link">Authors</a>
 
 										<ul>
-											<li><a href="index.html">1</a></li>
-											<li><a href="index.html">2</a></li>
-											<li><a href="index.html">3</a></li>
-											<li><a href="index.html">4</a></li>
-											<li><a href="index.html">5</a></li>
+											<li><a href="author1.php">1</a></li>
+											<li><a href="author2.php">2</a></li>
+											<li><a href="author3.php">3</a></li>
+											<li><a href="author4.php">4</a></li>
+											<li><a href="author5.php">5</a></li>
 										</ul>
 
 									</li>

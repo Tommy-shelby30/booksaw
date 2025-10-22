@@ -19,7 +19,7 @@
 
         <form method="POST">
             <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
+                <label for="name" class="form-label">First Name</label>
                 <input type="text" name='fname' class="form-control" id="name" placeholder="Enter your name" required>
 
             
@@ -67,7 +67,7 @@ if(isset($_POST['signup'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $query = "insert into signup (firstname, lastname, email, password)
+    $query = "insert into signup1 (fname, lname, email, password)
     values('$fname', '$lname', '$email', '$password')";
     $run = mysqli_query($conn, $query);
     if($run) {

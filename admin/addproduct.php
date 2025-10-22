@@ -32,14 +32,15 @@ if (isset($_POST['submitproduct'])) {
 
     
     if (strtolower(pathinfo($imgname, PATHINFO_EXTENSION)) == 'png' || 
-        strtolower(pathinfo($imgname, PATHINFO_EXTENSION)) == 'jpg' || 
+        strtolower(pathinfo($imgname, PATHINFO_EXTENSION)) == 'jpg' ||
+        strtolower(pathinfo($imgname, PATHINFO_EXTENSION)) == 'jfif' ||
         strtolower(pathinfo($imgname, PATHINFO_EXTENSION)) == 'jpeg') {
 
-        if ($imgsize >= 1000000) {
+        if ($imgsize <= 1000000) {
             $storage = "images/" . basename($imgname);
 
             
-            $query = "INSERT INTO category (name, price, description, img) 
+            $query = "INSERT INTO author (name, price, description, img) 
                       VALUES ('$name', '$price','$description', '$storage')";
 
             $run = mysqli_query($conn, $query);

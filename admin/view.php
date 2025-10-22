@@ -10,7 +10,7 @@ include('header.php');
 <?php 
     include('conn.php');
 
-    $query = "SELECT * FROM category";
+    $query = "SELECT * FROM author";
     $run = mysqli_query($conn, $query);
     $totalrows = mysqli_num_rows($run);
 
